@@ -2,19 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Node implements Comparable<Node> {
-
-    private static int idCounter = 0;
+    private static int idCont = 0;
     public int id;
     public Node parent = null;
     public List<Edge> neighbors;
-
     public double f = Double.MAX_VALUE;
     public double g = Double.MAX_VALUE;
     public double h;
 
     Node(double h){
         this.h = h;
-        this.id = idCounter++;
+        this.id = idCont++;
         this.neighbors = new ArrayList<>();
     }
 
@@ -38,7 +36,7 @@ public class Node implements Comparable<Node> {
         neighbors.add(newEdge);
     }
 
-    public double calculateHeuristic(Node target){
+    public double calculateHeuristic(Node b){
         return this.h;
     }
 }

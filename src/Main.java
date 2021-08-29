@@ -4,35 +4,35 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Node head = new Node(3);
-        head.g = 0;
+        Node a = new Node(3);
+        a.g = 0;
 
         Node n1 = new Node(2);
         Node n2 = new Node(2);
         Node n3 = new Node(2);
 
-        head.addBranch(1, n1);
-        head.addBranch(5, n2);
-        head.addBranch(2, n3);
+        a.addBranch(1, n1);
+        a.addBranch(5, n2);
+        a.addBranch(2, n3);
         n3.addBranch(1, n2);
 
         Node n4 = new Node(1);
         Node n5 = new Node(1);
-        Node target = new Node(0);
+        Node b = new Node(0);
 
         n1.addBranch(7, n4);
         n2.addBranch(4, n5);
         n3.addBranch(6, n4);
-        n4.addBranch(3, target);
+        n4.addBranch(3, b);
         n5.addBranch(1, n4);
-        n5.addBranch(3, target);
+        n5.addBranch(3, b);
 
-        Node result = Astar.aStar(head, target);
+        Node result = Astar.aStar(a, b);
         output(result);
     }
 
-    public static void output(Node target){
-        Node n = target;
+    public static void output(Node b){
+        Node n = b;
 
         if(n==null)
             return;
