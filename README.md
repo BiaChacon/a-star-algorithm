@@ -77,6 +77,6 @@
 
 ## 📝 Licença
 
-Este projeto está sob o MIT. Veja aqui [LICENSE](https://github.com/BiaChacon/a-star-algorithm/blob/main/LICENSE) para mais informações.
+Este projeto está sob o MIT. Veja aqui [LICENSE](https://github.com/BiaChacon/a-star-algorithm/blob/master/LICENSE) para mais informações.
 
 ---
